@@ -3,6 +3,9 @@ module.exports = {
     commonjs: true,
     es2022: true,
     node: true,
+		rules: {
+			'prettier/prettier': 0,
+		},
   },
   extends: ['eslint:recommended', 'prettier'],
   plugins: ['prettier'],
