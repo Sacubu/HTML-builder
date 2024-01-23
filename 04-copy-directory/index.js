@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const sourceFolderPath = './HTML-builder/04-copy-directory/files';
-const destinationFolderPath = './HTML-builder/04-copy-directory/files-copy';
+const sourceFolderPath = './04-copy-directory/files';
+const destinationFolderPath = './04-copy-directory/files-copy';
 
 async function copyDir(source, destination) {
   try {

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 
-const filePath = './HTML-builder/02-write-file/02-write-file.txt';
+const filePath = './02-write-file/02-write-file.txt';
 const exitCommand = '.exit';
 const message = 'Goodbye!';
 
