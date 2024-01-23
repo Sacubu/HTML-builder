@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const stylesFolderPath = './HTML-builder/05-merge-styles/styles';
-const bundleFilePath = './HTML-builder/05-merge-styles/project-dist/bundle.css';
+const stylesFolderPath = './05-merge-styles/styles';
+const bundleFilePath = './05-merge-styles/project-dist/bundle.css';
 
 const isCSSFile = (file) => {
   return file.isFile() && path.extname(file.name) === '.css';

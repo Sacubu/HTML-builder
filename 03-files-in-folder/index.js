@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const secretFolderPath = './HTML-builder/03-files-in-folder/secret-folder';
+const secretFolderPath = './03-files-in-folder/secret-folder';
 
 fs.readdir(secretFolderPath, { withFileTypes: true }, (err, files) => {
   if (err) {
