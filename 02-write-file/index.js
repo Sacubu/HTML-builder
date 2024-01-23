@@ -1,7 +1,9 @@
 const fs = require('fs');
 const readline = require('readline');
+const path = require('path');
 
-const filePath = './02-write-file/02-write-file.txt';
+const fileName = '02-write-file.txt';
+const filePath = path.join('./02-write-file', fileName);
 const exitCommand = '.exit';
 const message = 'Goodbye!';
 
