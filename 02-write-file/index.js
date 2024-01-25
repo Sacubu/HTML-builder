@@ -9,7 +9,7 @@ const message = 'Goodbye!';
 
 const writeStream = fs.createWriteStream(filePath, { flags: 'a' });
 
-console.log('Welcome! Enter text or type ".exit" to quit.');
+console.log('Welcome! Enter text or type ".exit" or press Ctrl + C to quit.');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -27,4 +27,9 @@ rl.on('line', (input) => {
 
 rl.on('close', () => {
   writeStream.end();
+});
+
+rl.on('SIGINT', () => {
+  console.log(message);
+  rl.close();
 });
