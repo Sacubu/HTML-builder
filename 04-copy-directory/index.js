@@ -27,4 +27,19 @@ async function copyDir(source, destination) {
   }
 }
 
+fs.watch(sourceFolderPath, { recursive: true }, (eventType, filename) => {
+  if (eventType === 'rename' && filename) {
+    const sourcePath = path.join(sourceFolderPath, filename);
+    const destinationPath = path.join(destinationFolderPath, filename);
+
+    fs.promises.access(sourcePath)
+      .then(() => {
+        return fs.promises.copyFile(sourcePath, destinationPath);
+      })
+      .catch(() => {
+        return fs.promises.unlink(destinationPath);
+      });
+  }
+});
+
 copyDir(sourceFolderPath, destinationFolderPath);
